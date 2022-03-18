@@ -5,60 +5,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-    }
-
-    body {
-      display: grid;
-      place-content: center;
-      width: 100%;
-      height: 100vh;
-    }
-  </style>
-
+  <title>Enviar dados digitados no formulário para o Whatsapp</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>Sem redirecionamento</h1>
+  <!-- Sem redirecionamento -->
+  <h1></h1>
   <form action="#" method="get" onsubmit="abrirWhatsapp()">
     <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
     <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
     <input type="email" name="email" id="email" placeholder="E-mail" required><br>
-    <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
+    <textarea name="msg" id="msg" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
     <button type="submit">Enviar dados p/ Whatsapp</button>
   </form>
 
-  <h1>Com redirecionamento</h1>
-  <form action="obrigado.html" method="get" onsubmit="abrirWhatsapp()">
+  <!-- Com redirecionamento p/ página: obrigado.html -->
+  <!-- <form action="obrigado.html" method="get" onsubmit="abrirWhatsapp()">
     <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
     <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
     <input type="email" name="email" id="email" placeholder="E-mail" required><br>
-    <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
+    <textarea name="msg" id="msg" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
     <button type="submit">Enviar dados p/ Whatsapp</button>
-  </form>
+  </form> -->
 
-  <script>
-    function abrirWhatsapp() {
-      var nome = document.getElementById("nome").value;
-      var telefone = document.getElementById("telefone").value;
-      var email = document.getElementById("email").value;
-      var mensagem = document.getElementById("mensagem").value;
-      var url = "https://wa.me/5517992143072?text="
-        + "*Formulário de Contato*" + "%0a"
-        + "%0a"
-        + "*Nome*: " + nome + "%0a"
-        + "*Telefone*: " + telefone + "%0a"
-        + "*E-mail*: " + email + "%0a"
-        + "*Mensagem*: " + mensagem;
-      window.open(url, '_blank').focus();
-    }
-  </script>
+  <script src="scripts.js"></script>
 
 </body>
 
