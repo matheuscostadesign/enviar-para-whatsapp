@@ -11,26 +11,45 @@
 
 <body>
 
-  <!-- Sem redirecionamento -->
-  <h1></h1>
-  <form action="#" method="get" onsubmit="abrirWhatsapp()">
-    <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
-    <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
-    <input type="email" name="email" id="email" placeholder="E-mail" required><br>
-    <textarea name="msg" id="msg" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
-    <button type="submit">Enviar dados p/ Whatsapp</button>
-  </form>
+  <h1>Formulário p/ Whatsapp</h1>
+  <p>Exemplo de como enviar os dados digitados no formulário HTML para o Whatsapp com validação de campos obrigatórios
+  </p>
 
-  <!-- Com redirecionamento p/ página: obrigado.html -->
-  <!-- <form action="obrigado.html" method="get" onsubmit="abrirWhatsapp()">
+  <!-- Sem redirecionamento -->
+  <!-- <form action="#" method="get" onsubmit="abrirWhatsapp()">
     <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
     <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
     <input type="email" name="email" id="email" placeholder="E-mail" required><br>
     <textarea name="msg" id="msg" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
-    <button type="submit">Enviar dados p/ Whatsapp</button>
+    <button type="submit"><img src="assets/whatsapp.svg" alt="Icone Whatsapp"><span>Enviar dados p/ Whatsapp</span>
+    </button>
   </form> -->
 
-  <script src="scripts.js"></script>
+  <!-- Com redirecionamento p/ página: obrigado.html -->
+  <form action="obrigado.html" method="get" onsubmit="abrirWhatsapp()">
+    <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
+    <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
+    <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+    <textarea name="msg" id="msg" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
+    <button type="submit"><img src="assets/whatsapp.svg" alt="Icone Whatsapp"><span>Enviar dados p/ Whatsapp</span>
+  </form>
+
+  <script>
+    function abrirWhatsapp() {
+      var nome = document.getElementById("nome").value;
+      var telefone = document.getElementById("telefone").value;
+      var email = document.getElementById("email").value;
+      var msg = document.getElementById("msg").value;
+      var url = "https://wa.me/5517992143072?text=" // Seu numero
+        + "*Formulário de Contato*" + "%0a" // Mensagem personalizada
+        + "%0a" // Quebra de linha
+        + "*Nome*: " + nome + "%0a" // Dados do formulário
+        + "*Telefone*: " + telefone + "%0a"
+        + "*E-mail*: " + email + "%0a"
+        + "*Mensagem*: " + msg;
+      window.open(url, '_blank').focus();
+    }
+  </script>
 
 </body>
 

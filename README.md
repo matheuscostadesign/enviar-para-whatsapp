@@ -1,6 +1,6 @@
 # enviar-para-whatsapp
 
-- Exemplo de como enviar os dados digitados no formulário HTML para o Whatsapp com validação dos campos obrigatórios
+- Exemplo de como enviar os dados digitados no formulário HTML para o Whatsapp com validação de campos obrigatórios
 
 ### HTML: Sem redirecionamento
 
@@ -41,7 +41,7 @@
         + "*Nome*: " + nome + "%0a" // Dados do formulário
         + "*Telefone*: " + telefone + "%0a"
         + "*E-mail*: " + email + "%0a"
-        + "*Mensagem*: " + mensagem;
+        + "*Mensagem*: " + msg;
       window.open(url, '_blank').focus();
     }
 </script>
