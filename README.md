@@ -7,7 +7,7 @@
   <input type="text" name="nome" id="nome" placeholder="Nome" required /><br />
   <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required /><br />
   <input type="email" name="email" id="email" placeholder="E-mail" required /><br />
-  <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="5" required></textarea><br />
+  <textarea name="mensagem" id="mensagem" placeholder="Mensagem" rows="5" required></textarea><br />
   <button type="submit">Enviar dados p/ Whatsapp</button>
 </form>
 ```
@@ -19,7 +19,7 @@
   <input type="text" name="nome" id="nome" placeholder="Nome" required /><br />
   <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required /><br />
   <input type="email" name="email" id="email" placeholder="E-mail" required /><br />
-  <textarea name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="5" required></textarea><br />
+  <textarea name="mensagem" id="mensagem" placeholder="Mensagem" rows="5" required></textarea><br />
   <button type="submit">Enviar dados p/ Whatsapp</button>
 </form>
 ```
