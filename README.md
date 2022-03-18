@@ -1,6 +1,6 @@
 # enviar-para-whatsapp
 
-### Sem redirecionamento
+### HTML: Sem redirecionamento
 
 ```html
 <form action="#" method="get" onsubmit="abrirWhatsapp()">
@@ -12,7 +12,7 @@
 </form>
 ```
 
-### Com redirecionamento
+### HTML: Com redirecionamento
 
 ```html
 <form action="obrigado.html" method="get" onsubmit="abrirWhatsapp()">
@@ -23,6 +23,8 @@
   <button type="submit">Enviar dados p/ Whatsapp</button>
 </form>
 ```
+
+### Javascript
 
 ```js
 <script>
