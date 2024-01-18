@@ -35,7 +35,7 @@
       var telefone = document.getElementById("telefone").value;
       var email = document.getElementById("email").value;
       var msg = document.getElementById("msg").value;
-      var url = "https://wa.me/5517992143072?text=" // Seu numero
+      var url = "https://wa.me/5517999999999?text=" // Seu numero
         + "*Formulário de Contato*" + "%0a" // Mensagem personalizada
         + "%0a" // Quebra de linha
         + "*Nome*: " + nome + "%0a" // Dados do formulário
